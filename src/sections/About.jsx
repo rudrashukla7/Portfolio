@@ -1,0 +1,152 @@
+import { Cpu, Bot, Eye, Cable } from "lucide-react";
+
+const highlights = [
+    {
+        icon: Cpu,
+        title: "Embedded Systems",
+        description: "Building real-time systems using ESP32, Arduino, and Raspberry Pi.",
+    },
+    {
+        icon: Bot,
+        title: "Robotics & Automation",
+        description: "Designing and controlling hardware-software systems for real-world tasks.",
+    },
+    {
+        icon: Eye,
+        title: "Computer Vision",
+        description: "Developing vision-based applications using OpenCV and machine learning.",
+    },
+    {
+        icon: Cable,
+        title: "Hardware-Software Integration",
+        description: "Connecting web interfaces with physical systems for interactive control.",
+    },
+]
+
+export const About = () => {
+    return (
+        <section id="about" className="relative overflow-hidden" style={{ minHeight: "90vh", display: "flex", alignItems: "center", paddingTop: "4rem", paddingBottom: "4rem" }}>
+            <div className="w-full px-8 xl:px-16 relative z-10" style={{ maxWidth: "1400px", margin: "0 auto" }}>
+
+                {/* Section Header */}
+                <div className="text-center mb-10 mt-6 animate-fade-in">
+                    <h2
+                        className="text-4xl md:text-5xl font-bold leading-tight"
+                        style={{ color: "var(--color-secondary-foreground)" }}
+                    >
+                        About Me
+                    </h2>
+                </div>
+
+                {/* Main layout */}
+                <div
+                    className="flex flex-col lg:flex-row items-stretch w-full"
+                    style={{ gap: "2.5rem", minHeight: "60vh" }}
+                >
+                    {/* Profile Image — desktop: grows with height */}
+                    <div
+                        className="relative animate-fade-in animation-delay-200 flex-shrink-0 self-stretch hidden lg:block"
+                        style={{ width: "clamp(280px, 25vw, 420px)" }}
+                    >
+                        <div
+                            className="absolute inset-0 rounded-3xl blur-2xl animate-pulse"
+                            style={{
+                                background: "linear-gradient(to bottom right, color-mix(in srgb, var(--color-primary) 30%, transparent), transparent, color-mix(in srgb, var(--color-primary) 10%, transparent))"
+                            }}
+                        />
+                        <div className="relative glass rounded-3xl p-2 glow-border h-full">
+                            <img
+                                src="/profilephoto.jpg"
+                                alt="Rudra Shukla"
+                                className="w-full h-full object-cover rounded-2xl"
+                                style={{ objectPosition: "center top", minHeight: "400px" }}
+                            />
+                        </div>
+                    </div>
+
+                    {/* Mobile image */}
+                    <div className="relative animate-fade-in animation-delay-200 mx-auto lg:hidden" style={{ width: "280px" }}>
+                        <div
+                            className="absolute inset-0 rounded-3xl blur-2xl animate-pulse"
+                            style={{
+                                background: "linear-gradient(to bottom right, color-mix(in srgb, var(--color-primary) 30%, transparent), transparent, color-mix(in srgb, var(--color-primary) 10%, transparent))"
+                            }}
+                        />
+                        <div className="relative glass rounded-3xl p-2 glow-border">
+                            <img
+                                src="/profilephoto.jpg"
+                                alt="Rudra Shukla"
+                                className="w-full aspect-[4/5] object-cover rounded-2xl"
+                                style={{ objectPosition: "center top" }}
+                            />
+                        </div>
+                    </div>
+
+                    {/* Bio + Badges — fills remaining space and stretches */}
+                    <div className="flex flex-col gap-6 animate-fade-in animation-delay-300 flex-1 min-w-0">
+
+                        {/* Bio */}
+                        <div
+                            className="space-y-4 text-sm xl:text-base"
+                            style={{ color: "var(--color-muted-foreground)", lineHeight: "1.85" }}
+                        >
+                            <p>
+                                I am a Mechatronics Engineering student at the University of Waterloo with a strong interest in 
+                                building systems that bridge hardware and software. I enjoy working on embedded systems, robotics, 
+                                and computer vision, especially when developing projects that integrate real-world hardware with intelligent software.
+                            </p>
+                            <p>
+                                My work includes building embedded IoT systems, computer vision systems, and hardware-integrated platforms that 
+                                connect software with real-world devices. I have worked with platforms like ESP32, Arduino, and Raspberry Pi to develop 
+                                interactive and automated systems, focusing on reliability, performance, and clean system integration.
+                            </p>
+                            <p>
+                                Beyond technical work, I have spent several years teaching robotics and mentoring students, 
+                                which has strengthened my ability to break down complex concepts and lead collaborative projects.
+                            </p>
+                            <p>
+                                I am currently focused on building and improving systems in embedded computing, robotics, and intelligent hardware, 
+                                taking projects from concept to implementation with a focus on seamless system integration.
+                            </p>
+                        </div>
+
+                        {/* Highlights — flex-1 so they stretch to fill remaining vertical space */}
+                        <div className="grid grid-cols-2 gap-3 flex-1">
+                            {highlights.map((item, idx) => (
+                                <div
+                                    key={idx}
+                                    className="glass rounded-xl animate-fade-in transition-all duration-300 flex flex-col gap-2"
+                                    style={{
+                                        animationDelay: `${(idx + 1) * 100}ms`,
+                                        padding: "1rem 1.1rem",
+                                    }}
+                                    onMouseEnter={e => {
+                                        e.currentTarget.style.transform = "translateY(-3px)"
+                                        e.currentTarget.style.boxShadow = "0 6px 24px color-mix(in srgb, var(--color-primary) 10%, transparent)"
+                                    }}
+                                    onMouseLeave={e => {
+                                        e.currentTarget.style.transform = "translateY(0)"
+                                        e.currentTarget.style.boxShadow = "none"
+                                    }}
+                                >
+                                    <div className="flex items-center gap-2">
+                                        <div
+                                            className="w-7 h-7 rounded-md flex items-center justify-center flex-shrink-0"
+                                            style={{ backgroundColor: "color-mix(in srgb, var(--color-primary) 10%, transparent)" }}
+                                        >
+                                            <item.icon className="w-4 h-4" style={{ color: "var(--color-primary)" }} />
+                                        </div>
+                                        <h3 className="text-sm font-semibold leading-tight">{item.title}</h3>
+                                    </div>
+                                    <p style={{ color: "var(--color-muted-foreground)", fontSize: "0.75rem", lineHeight: "1.6" }}>
+                                        {item.description}
+                                    </p>
+                                </div>
+                            ))}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    )
+}
