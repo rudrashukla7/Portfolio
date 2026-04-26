@@ -1,6 +1,6 @@
 import { Button } from "@/components/Button";
 import { ArrowRight, ChevronDown, ExternalLink, ChevronUp } from "lucide-react";
-import { GithubIcon, LinkedinIcon, MailIcon, InstagramIcon } from "@/components/SocialIcons";
+import { GithubIcon, LinkedinIcon, MailIcon} from "@/components/SocialIcons";
 import { useState } from "react";
 
 const skills = [
@@ -13,7 +13,6 @@ const socialLinks = [
     { icon: GithubIcon, href: "https://github.com/rudrashukla7", label: "GitHub" },
     { icon: LinkedinIcon, href: "https://www.linkedin.com/in/shukla-rudra/", label: "LinkedIn" },
     { icon: MailIcon, href: "mailto:rudra.shukla@uwaterloo.ca", label: "Email" },
-    { icon: InstagramIcon, href: "https://www.instagram.com/rudra.1207", label: "Instagram" },
 ]
 
 export const Hero = () => {

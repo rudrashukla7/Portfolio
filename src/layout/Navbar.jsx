@@ -47,7 +47,7 @@ export const Navbar = () => {
                         onMouseLeave={e => { e.currentTarget.style.transform = "scale(1)" }}
                     >
                         <img
-                            src="/profilephoto.png"
+                            src="/profile-picture.jpeg"
                             alt="Profile"
                             className="w-10 h-10 rounded-full object-cover"
                             style={{

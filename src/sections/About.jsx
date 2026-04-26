@@ -25,16 +25,13 @@ const highlights = [
 
 export const About = () => {
     return (
-        <section id="about" className="relative overflow-hidden" style={{ minHeight: "90vh", display: "flex", alignItems: "center", paddingTop: "4rem", paddingBottom: "4rem" }}>
+        <section id="about" className="py-32 relative overflow-hidden" style={{ minHeight: "90vh", display: "flex", alignItems: "center" }}>
             <div className="w-full px-8 xl:px-16 relative z-10" style={{ maxWidth: "1400px", margin: "0 auto" }}>
 
-                {/* Section Header */}
-                <div className="text-center mb-10 mt-6 animate-fade-in">
-                    <h2
-                        className="text-4xl md:text-5xl font-bold leading-tight"
-                        style={{ color: "var(--color-secondary-foreground)" }}
-                    >
-                        About Me
+                {/* Section Header*/}
+                <div className="text-center mb-16 animate-fade-in">
+                    <h2 className="text-4xl md:text-5xl font-bold leading-tight" style={{ color: "var(--color-secondary-foreground)" }}>
+                        About <span style={{ color: "white" }}>Me</span>
                     </h2>
                 </div>
 
@@ -43,7 +40,7 @@ export const About = () => {
                     className="flex flex-col lg:flex-row items-stretch w-full"
                     style={{ gap: "2.5rem", minHeight: "60vh" }}
                 >
-                    {/* Profile Image — desktop: grows with height */}
+                    {/* Profile Image*/}
                     <div
                         className="relative animate-fade-in animation-delay-200 flex-shrink-0 self-stretch hidden lg:block"
                         style={{ width: "clamp(280px, 25vw, 420px)" }}
@@ -51,12 +48,13 @@ export const About = () => {
                         <div
                             className="absolute inset-0 rounded-3xl blur-2xl animate-pulse"
                             style={{
-                                background: "linear-gradient(to bottom right, color-mix(in srgb, var(--color-primary) 30%, transparent), transparent, color-mix(in srgb, var(--color-primary) 10%, transparent))"
+                                background: "linear-gradient(to bottom right, color-mix(in srgb, var(--color-primary) 30%, transparent), transparent, color-mix(in srgb, var(--color-primary) 10%, transparent))",
+                                zIndex: 1
                             }}
                         />
                         <div className="relative glass rounded-3xl p-2 glow-border h-full">
                             <img
-                                src="/profilephoto.jpg"
+                                src="/large-photo.jpg"
                                 alt="Rudra Shukla"
                                 className="w-full h-full object-cover rounded-2xl"
                                 style={{ objectPosition: "center top", minHeight: "400px" }}
@@ -74,7 +72,7 @@ export const About = () => {
                         />
                         <div className="relative glass rounded-3xl p-2 glow-border">
                             <img
-                                src="/profilephoto.jpg"
+                                src="/large-photo.jpg"
                                 alt="Rudra Shukla"
                                 className="w-full aspect-[4/5] object-cover rounded-2xl"
                                 style={{ objectPosition: "center top" }}
@@ -82,7 +80,7 @@ export const About = () => {
                         </div>
                     </div>
 
-                    {/* Bio + Badges — fills remaining space and stretches */}
+                    {/* Bio + Badges  */}
                     <div className="flex flex-col gap-6 animate-fade-in animation-delay-300 flex-1 min-w-0">
 
                         {/* Bio */}
@@ -110,7 +108,7 @@ export const About = () => {
                             </p>
                         </div>
 
-                        {/* Highlights — flex-1 so they stretch to fill remaining vertical space */}
+                        {/* Highlights */}
                         <div className="grid grid-cols-2 gap-3 flex-1">
                             {highlights.map((item, idx) => (
                                 <div

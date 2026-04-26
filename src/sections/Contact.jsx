@@ -59,14 +59,8 @@ export const Contact = () => {
             const body = encodeURIComponent(
                 `Name: ${formData.name}\nEmail: ${formData.email}\n\nMessage:\n${formData.message}`
             );
-
-            // Trigger mailto link
             window.location.href = `mailto:rudra.shukla@uwaterloo.ca?subject=${subject}&body=${body}`;
-
-            setSubmitStatus({
-                type: "success",
-                message: "Opening your email client...",
-            });
+            setSubmitStatus({ type: "success", message: "Opening your email client..." });
             setFormData({ name: "", email: "", message: "" });
         } catch (err) {
             console.error("Mailto error:", err);
@@ -76,7 +70,6 @@ export const Contact = () => {
             });
         } finally {
             setIsLoading(false);
-            // Clear status message after 5 seconds to be clean
             setTimeout(() => setSubmitStatus({ type: null, message: "" }), 5000);
         }
     };
@@ -96,30 +89,16 @@ export const Contact = () => {
             </div>
 
             <div className="container mx-auto px-6 relative z-10">
-                {/* Section Header */}
-                <div className="text-center max-w-3xl mx-auto mb-16">
-                    <span
-                        className="text-sm font-medium tracking-wider uppercase animate-fade-in"
-                        style={{ color: "var(--color-secondary-foreground)" }}
-                    >
-                        Get In Touch
-                    </span>
-                    <h2
-                        className="text-4xl md:text-5xl font-bold mt-4 mb-6 animate-fade-in animation-delay-100"
-                        style={{ color: "var(--color-secondary-foreground)" }}
-                    >
-                        Let's build{" "}
-                        <span className="font-serif italic font-normal" style={{ color: "white" }}>
-                            something great.
-                        </span>
+
+                {/* Section Header*/}
+                <div className="text-center mb-16 animate-fade-in">
+                    <h2 className="text-4xl md:text-5xl font-bold leading-tight" style={{ color: "var(--color-secondary-foreground)" }}>
+                        Lets <span style={{ color: "white" }}>Talk</span>
                     </h2>
-                    <p className="animate-fade-in animation-delay-200" style={{ color: "var(--color-muted-foreground)" }}>
-                        Have a project in mind? I'd love to hear about it. Send me a message
-                        and let's discuss how we can work together.
-                    </p>
                 </div>
 
                 <div className="grid lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+
                     {/* Contact Form */}
                     <div
                         className="glass p-8 rounded-3xl animate-fade-in animation-delay-300"
@@ -193,14 +172,7 @@ export const Contact = () => {
                             </div>
 
                             <Button className="w-full" type="submit" size="lg" disabled={isLoading}>
-                                {isLoading ? (
-                                    <>Sending...</>
-                                ) : (
-                                    <>
-                                        Send Message
-                                        <Send className="w-5 h-5" />
-                                    </>
-                                )}
+                                {isLoading ? <>Sending...</> : <>Send Message <Send className="w-5 h-5" /></>}
                             </Button>
 
                             {submitStatus.type && (
@@ -235,7 +207,6 @@ export const Contact = () => {
                                     const content = (
                                         <div
                                             className="flex items-center gap-4 p-3 rounded-xl transition-all duration-200"
-                                            style={{ textDecoration: "none" }}
                                             onMouseEnter={e => {
                                                 if (item.href) e.currentTarget.style.backgroundColor = "var(--color-surface)"
                                             }}
@@ -244,7 +215,7 @@ export const Contact = () => {
                                             }}
                                         >
                                             <div
-                                                className="w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-200"
+                                                className="w-12 h-12 rounded-xl flex items-center justify-center transition-all duration-200 flex-shrink-0"
                                                 style={{
                                                     backgroundColor: "color-mix(in srgb, var(--color-primary) 10%, transparent)",
                                                     color: "var(--color-primary)",
@@ -276,8 +247,16 @@ export const Contact = () => {
 
                         {/* Availability Card */}
                         <div
-                            className="glass rounded-3xl p-8"
+                            className="glass rounded-3xl p-8 transition-all duration-300"
                             style={{ border: "1px solid color-mix(in srgb, var(--color-primary) 30%, transparent)" }}
+                            onMouseEnter={e => {
+                                e.currentTarget.style.transform = "translateY(-4px)"
+                                e.currentTarget.style.boxShadow = "0 8px 30px color-mix(in srgb, var(--color-primary) 10%, transparent)"
+                            }}
+                            onMouseLeave={e => {
+                                e.currentTarget.style.transform = "translateY(0)"
+                                e.currentTarget.style.boxShadow = "none"
+                            }}
                         >
                             <div className="flex items-center gap-3 mb-4">
                                 <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />

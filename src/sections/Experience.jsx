@@ -3,7 +3,7 @@ const education = [
         degree: "Honours Mechatronics Engineering, Co-op (BASc)",
         school: "University of Waterloo",
         period: "2025 — 2030",
-        detail: "Coursework: Data Structures & Algorithms, Circuits, Statics, Materials GPA: 3.93/4.0 | President's Scholar of Distinction",
+        detail: "Coursework: Data Structures & Algorithms, Circuits, Statics, Materials GPA: 3.9/4.0 | President's Scholar of Distinction",
     },
     {
         degree: "Ontario Secondary School Diploma",
@@ -44,7 +44,7 @@ const experiences = [
     },
 ]
 
-// Bolds numeric values like "20", "25%", "200", "80" found in a string
+// Bolds numeric values
 const BoldNumbers = ({ text }) => {
     const parts = text.split(/(\b\d+%?\b)/g)
     return (
@@ -108,7 +108,7 @@ export const Experience = () => {
                     ))}
                 </div>
 
-                {/* ── Experience ── */}
+                {/* Experience */}
                 <div className="text-center mb-10 animate-fade-in">
                     <h2 className="text-4xl md:text-5xl font-bold leading-tight" style={{ color: "var(--color-secondary-foreground)" }}>
                         My <span style={{ color: "white" }}>Experience</span>
@@ -147,7 +147,7 @@ export const Experience = () => {
                                 </p>
                             </div>
 
-                            {/* Description — single paragraph with bold numbers */}
+                            {/* Description  */}
                             <p className="text-sm" style={{ color: "var(--color-muted-foreground)", lineHeight: "1.75" }}>
                                 <BoldNumbers text={exp.description} />
                             </p>
