@@ -120,11 +120,17 @@ export const About = () => {
                                     }}
                                     onMouseEnter={e => {
                                         e.currentTarget.style.transform = "translateY(-3px)"
-                                        e.currentTarget.style.boxShadow = "0 6px 24px color-mix(in srgb, var(--color-primary) 10%, transparent)"
+                                        e.currentTarget.style.boxShadow = "0 8px 24px color-mix(in srgb, var(--color-primary) 10%, transparent)"
+                                        e.currentTarget.style.borderColor = "color-mix(in srgb, var(--color-primary) 50%, transparent)"
+                                        e.currentTarget.style.color = "var(--color-primary)"
+                                        e.currentTarget.style.transform = "scale(1.08)"
                                     }}
                                     onMouseLeave={e => {
                                         e.currentTarget.style.transform = "translateY(0)"
                                         e.currentTarget.style.boxShadow = "none"
+                                        e.currentTarget.style.borderColor = "color-mix(in srgb, var(--color-border) 50%, transparent)"
+                                        e.currentTarget.style.color = "var(--color-muted-foreground)"
+                                        e.currentTarget.style.transform = "scale(1)"
                                     }}
                                 >
                                     <div className="flex items-center gap-2">

@@ -18,6 +18,7 @@ const experiences = [
         period: "Jan 2026 — Apr 2026",
         role: "Software Quality Analyst",
         company: "i4i (Infrastructures for Information Inc.)",
+        link: "https://www.i4i.com/",
         description: "Performed structured software testing to ensure product reliability and quality at launch. Executed a high volume of test scripts daily, validating system behavior by comparing expected and actual results and identifying defects across a range of use cases. Collaborated closely with developers to log, track, and verify bugs through detailed reports, ensuring issues were clearly documented and resolved efficiently.",
         technologies: ["Software Testing", "QA", "Bug Tracking", "Test Scripts"],
     },
@@ -25,6 +26,7 @@ const experiences = [
         period: "Jan 2023 — Aug 2025",
         role: "Robotics Instructor",
         company: "OBOTZ – IQ Brainers Academy",
+        link: "https://obotz.ca/",
         description: "Began as a student and progressed into a teaching role, developing and delivering robotics curriculum for over 20 students. Taught core concepts including circuit design, electrical theory, and Arduino programming. Led hands-on sessions where students built obstacle-avoiding robots, robotic arms, and mini humanoid systems. Collaborated with industry professionals to refine curriculum content.",
         technologies: ["Arduino", "Circuit Design", "Python", "Curriculum Design"],
     },
@@ -32,6 +34,7 @@ const experiences = [
         period: "Sep 2021 — Jun 2025",
         role: "Mechanical & Design Lead – FIRST Tech Challenge",
         company: "J. Clarke Richardson Collegiate Robotics Team (StormBots)",
+        link: "https://jclarkerichardson.ddsb.ca/en/index.aspx",
         description: "Led the mechanical design and development of a competitive robotics system using SolidWorks to design and optimize key subsystems including the drivetrain and scoring mechanisms. Applied torque analysis, gear ratios, and material selection to improve performance. Collaborated with the software team to integrate control systems and contributed to autonomous functionality, improving scoring consistency by 25% in competition.",
         technologies: ["SolidWorks", "C++", "Mechanical Design", "CAD"],
     },
@@ -39,6 +42,7 @@ const experiences = [
         period: "Sep 2023 — Jun 2025",
         role: "Warrant Officer First Class & Senior Aviation Instructor",
         company: "856 Royal Canadian Air Cadets",
+        link: "https://www.canada.ca/en/department-national-defence/services/cadets-junior-canadian-rangers/cadets/what-we-do/air.html",
         description: "Held a senior leadership role responsible for over 200 cadets, overseeing training, discipline, and overall operations. Planned and managed large-scale field training exercises involving up to 80 cadets. Completed advanced aviation training and later instructed cadets in flight theory, navigation, and aircraft systems.",
         technologies: ["Leadership", "Aviation Theory", "Training", "Operations"],
     },
@@ -115,11 +119,17 @@ export const Experience = () => {
                     </h2>
                 </div>
 
-                <div className="grid md:grid-cols-2 gap-5 max-w-5xl mx-auto">
+                <div className="grid md:grid-cols-2 gap-5 max-w-5xl mx-auto items-stretch">
                     {experiences.map((exp, idx) => (
+                    <a
+                        key={idx}
+                        href={exp.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        style={{ textDecoration: "none" }}
+                    >
                         <div
-                            key={idx}
-                            className="glass rounded-2xl flex flex-col gap-4 transition-all duration-300 animate-fade-in"
+                            className="glass rounded-2xl flex flex-col gap-4 h-full transition-all duration-300 animate-fade-in"
                             style={{
                                 padding: "1.4rem 1.6rem",
                                 animationDelay: `${(idx + 1) * 100}ms`,
@@ -169,9 +179,10 @@ export const Experience = () => {
                                 ))}
                             </div>
                         </div>
-                    ))}
-                </div>
+                    </a>
+                ))}
             </div>
+        </div>
         </section>
     )
 }

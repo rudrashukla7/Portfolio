@@ -7,30 +7,30 @@ const projects = [
     {
         title: "AutoniMake – AI Robotics Platform",
         description: "A code-free AI robotics platform enabling real-time computer vision model training and direct hardware control through a web-based interface. Integrated a Raspberry Pi and ESP32 for vision processing and low-level device control, with a lightweight CNN model and custom serial communication for low-latency motor and sensor control.",
-        image: "/projects/project1.png",
+        image: "/public/autonimake-image.jpg",
         tags: ["Raspberry Pi", "ESP32", "Python", "OpenCV", "TensorFlow"],
         github: "https://github.com/rudrashukla7/Autonimake",
     },
     {
         title: "Automatic Blinds Controller",
         description: "An ESP32-based automatic blinds controller with precise bidirectional stepper motor control. Developed an embedded control system with a web-based interface for real-time manual and scheduled control over WiFi, emphasizing IoT connectivity, power management, and real-world automation.",
-        image: "/projects/project2.png",
+        image: "/public/project2.jpg",
         tags: ["ESP32", "C/C++", "Embedded Systems", "IoT"],
         github: "https://github.com/rudrashukla7/Automatic-Blinds-Controller",
     },
     {
         title: "Computer Vision Pong",
         description: "An interactive Pong game controlled entirely through computer vision using real-time hand tracking to replace traditional input devices. Built with OpenCV to detect and track player movement, translating it into responsive in-game controls with optimized latency for smooth gameplay.",
-        image: "/projects/project3.png",
+        image: "/public/CV-Pong.jpg",
         tags: ["Python", "OpenCV", "Computer Vision"],
         github: "https://github.com/rudrashukla7/Computer-Vision-Pong",
     },
     {
         title: "LED Sign Board",
         description: "A custom 28×8 LED sign board built with an ESP32 microcontroller, CNC-machined enclosure, and hand-soldered electronics. Integrated and configured WLED firmware for real-time control via a web interface over a local network, highlighting hands-on hardware design and system integration.",
-        image: "/projects/project4.png",
+        image: "/public/SignBoard.jpg",
         tags: ["ESP32", "WLED", "CNC Machining", "Soldering"],
-        github: "ADD_GITHUB_REPO_LINK_4",
+        // github: "ADD_GITHUB_REPO_LINK_4",
     },
 ]
 
@@ -58,11 +58,14 @@ const ProjectCard = ({ project, idx }) => {
         >
             {/* Image */}
             <div className="relative overflow-hidden aspect-video">
-                <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                />
+                <div className="w-full h-full overflow-hidden">
+                    <img
+                        src={project.image}
+                        alt={project.title}
+                        className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                    />
+                </div>
+
                 <div className="absolute inset-0 bg-gradient-to-t from-card via-card/50 to-transparent opacity-60" />
 
                 {/* GitHub icon overlay */}
