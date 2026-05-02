@@ -260,12 +260,10 @@ export const Contact = () => {
                         >
                             <div className="flex items-center gap-3 mb-4">
                                 <span className="w-3 h-3 bg-green-500 rounded-full animate-pulse" />
-                                <span className="font-medium">Currently Available</span>
+                                <span className="font-medium">Open To Work</span>
                             </div>
                             <p className="text-sm" style={{ color: "var(--color-muted-foreground)" }}>
-                                I'm currently open to new opportunities and exciting projects.
-                                Whether you need a full-time engineer or a freelance consultant,
-                                let's talk!
+                                I'm currently open to new opportunities for Fall 2026 and exciting projects. Feel free to reach out if you'd like to connect or collaborate!
                             </p>
                         </div>
                     </div>
