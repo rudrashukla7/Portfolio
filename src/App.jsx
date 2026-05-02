@@ -5,8 +5,7 @@ import { About } from "@/sections/About";
 import { Projects } from "@/sections/Projects";
 import { Experience } from "@/sections/Experience";
 import { Contact } from "@/sections/Contact";
-import { Analytics } from "@vercel/analytics/react"
-
+import { Analytics } from "@vercel/analytics/next"
 
 const dots = Array.from({ length: 30 }, () => ({
     left: `${Math.random() * 100}%`,
