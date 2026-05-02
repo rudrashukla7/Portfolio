@@ -5,6 +5,8 @@ import { About } from "@/sections/About";
 import { Projects } from "@/sections/Projects";
 import { Experience } from "@/sections/Experience";
 import { Contact } from "@/sections/Contact";
+import { Analytics } from "@vercel/analytics/react"
+
 
 const dots = Array.from({ length: 30 }, () => ({
     left: `${Math.random() * 100}%`,
@@ -42,6 +44,7 @@ function App() {
                 <Contact />
             </main>
             <Footer />
+            <Analytics />
         </div>
     )
 }
