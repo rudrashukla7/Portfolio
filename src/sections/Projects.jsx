@@ -14,7 +14,7 @@ const projects = [
     {
         title: "Automatic Blinds Controller",
         description: "An ESP32-based automatic blinds controller with precise bidirectional stepper motor control. Developed an embedded control system with a web-based interface for real-time manual and scheduled control over WiFi, emphasizing IoT connectivity, power management, and real-world automation.",
-        image: "/project2.jpg",
+        image: "/blinds-photo.png",
         tags: ["ESP32", "C/C++", "Embedded Systems", "IoT"],
         github: "https://github.com/rudrashukla7/Automatic-Blinds-Controller",
     },
