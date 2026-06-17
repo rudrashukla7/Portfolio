@@ -34,7 +34,7 @@ export const Hero = () => {
                         style={{ color: "var(--color-muted-foreground)" }}
                     >
                         Hi, I'm Rudra Shukla, a Mechatronics Engineering student at the University of Waterloo
-                        with a passion for robotics, embedded systems, and software development.
+                        with a passion for robotics, embedded systems, and hardware-software integration.
                     </p>
                 </div>
 

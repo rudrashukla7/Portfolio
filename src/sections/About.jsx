@@ -85,26 +85,18 @@ export const About = () => {
 
                         {/* Bio */}
                         <div
-                            className="space-y-4 text-sm xl:text-base"
+                            className="space-y-4 text-base xl:text-lg"
                             style={{ color: "var(--color-muted-foreground)", lineHeight: "1.85" }}
                         >
                             <p>
-                                I am a Mechatronics Engineering student at the University of Waterloo with a strong interest in 
-                                building systems that bridge hardware and software. I enjoy working on embedded systems, robotics, 
-                                and computer vision, especially when developing projects that integrate real-world hardware with intelligent software.
+                                I am a Mechatronics Engineering student at the University of Waterloo with a strong interest in
+                                building systems that bridge hardware and software, especially embedded systems, robotics, and computer vision.
                             </p>
                             <p>
-                                My work includes building embedded IoT systems, computer vision systems, and hardware-integrated platforms that 
-                                connect software with real-world devices. I have worked with platforms like ESP32, Arduino, and Raspberry Pi to develop 
-                                interactive and automated systems, focusing on reliability, performance, and clean system integration.
+                                I have worked with platforms like ESP32, Arduino, and Raspberry Pi to build interactive, automated systems, and I have also spent several years teaching robotics and mentoring students along the way.
                             </p>
                             <p>
-                                Beyond technical work, I have spent several years teaching robotics and mentoring students, 
-                                which has strengthened my ability to break down complex concepts and lead collaborative projects.
-                            </p>
-                            <p>
-                                I am currently focused on building and improving systems in embedded computing, robotics, and intelligent hardware, 
-                                taking projects from concept to implementation with a focus on seamless system integration.
+                                I enjoy turning theoretical engineering concepts into working systems, from hardware prototypes to software-controlled automation, and I am particularly interested in building projects that combine real-time sensing, control systems, and intelligent decision-making.
                             </p>
                         </div>
 
@@ -142,7 +134,7 @@ export const About = () => {
                                         </div>
                                         <h3 className="text-sm font-semibold leading-tight">{item.title}</h3>
                                     </div>
-                                    <p style={{ color: "var(--color-muted-foreground)", fontSize: "0.75rem", lineHeight: "1.6" }}>
+                                    <p style={{ color: "var(--color-muted-foreground)", fontSize: "0.9rem", lineHeight: "1.6" }}>
                                         {item.description}
                                     </p>
                                 </div>

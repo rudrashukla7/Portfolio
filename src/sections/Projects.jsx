@@ -5,6 +5,13 @@ import { useState } from "react";
 
 const projects = [
     {
+        title: "Toyota Innovation Challenge (Safety Award Winner)",
+        description: "A multi-modal intelligent manufacturing assistant combining computer vision, robotics, and voice interaction to support industrial workflows. Integrated vision-based defect detection, bin localization, and robotic arm control for real-time automation, with a voice-activated assistant enabling hands-free operation across the system.",
+        image: "/toyota-innovation.jpg",
+        tags: ["Python", "Computer Vision", "Raspberry Pi", "Embedded Systems", "Voice Recognition"],
+        github: "https://github.com/zabsy/toyota-innovation-challenge",
+    },
+    {
         title: "AutoniMake – AI Robotics Platform",
         description: "A code-free AI robotics platform enabling real-time computer vision model training and direct hardware control through a web-based interface. Integrated a Raspberry Pi and ESP32 for vision processing and low-level device control, with a lightweight CNN model and custom serial communication for low-latency motor and sensor control.",
         image: "/autonimake-image.jpg",
@@ -24,13 +31,6 @@ const projects = [
         image: "/CV-Pong.jpg",
         tags: ["Python", "OpenCV", "Computer Vision"],
         github: "https://github.com/rudrashukla7/Computer-Vision-Pong",
-    },
-    {
-        title: "LED Sign Board",
-        description: "A custom 28×8 LED sign board built with an ESP32 microcontroller, CNC-machined enclosure, and hand-soldered electronics. Integrated and configured WLED firmware for real-time control via a web interface over a local network, highlighting hands-on hardware design and system integration.",
-        image: "/SignBoard.jpg",
-        tags: ["ESP32", "WLED", "CNC Machining", "Soldering"],
-        github: null,
     },
 ]
 

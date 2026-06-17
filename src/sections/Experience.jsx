@@ -3,7 +3,7 @@ const education = [
         degree: "Honours Mechatronics Engineering, Co-op (BASc)",
         school: "University of Waterloo",
         period: "2025 — 2030",
-        detail: "Coursework: Data Structures & Algorithms, Circuits, Statics, Materials GPA: 3.9/4.0 | President's Scholar of Distinction",
+        detail: "Coursework: Data Structures & Algorithms, Circuits, Statics, Materials GPA: 3.93/4.0 | President's Scholar of Distinction",
     },
     {
         degree: "Ontario Secondary School Diploma",
@@ -14,6 +14,16 @@ const education = [
 ]
 
 const experiences = [
+    {
+        period: "May 2026 — Present",
+        role: "Firmware & Perception Core Member",
+        company: "WATonomous (Humanoid Team)",
+        link: "https://www.watonomous.ca/",
+        description: "Implementing SLAM-based perception pipelines for humanoid robot localization and mapping. Developing embedded C++ firmware for custom motor control, regulation, and real-time actuation. Designing hardware-software interfaces and communication protocols for robotic subsystems.",
+        technologies: [
+            "SLAM", "Computer Vision", "Embedded C++","Firmware"
+        ],
+    },
     {
         period: "Jan 2026 — Apr 2026",
         role: "Software Quality Analyst",
@@ -46,7 +56,7 @@ const experiences = [
         description: "Held a senior leadership role responsible for over 200 cadets, overseeing training, discipline, and overall operations. Planned and managed large-scale field training exercises involving up to 80 cadets. Completed advanced aviation training and later instructed cadets in flight theory, navigation, and aircraft systems.",
         technologies: ["Leadership", "Aviation Theory", "Training", "Operations"],
     },
-]
+];
 
 // Bolds numeric values
 const BoldNumbers = ({ text }) => {
